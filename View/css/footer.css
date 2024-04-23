@@ -1,0 +1,88 @@
+/*-----Footer-----*//*-----Footer-----*/
+#footer{
+  width: 100%;
+  height: auto;
+}
+
+/*-----footer-----*/
+.footer{
+  background: #3b4a6b;
+  padding: 50px 15px 0;
+}
+.footer-column{
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 15px 0 15px;
+}
+.footer-about img{
+  max-width: 100%;
+  margin-bottom: 20px;
+  vertical-align: middle;
+}
+.footer-about p{
+  margin-bottom: 30px;
+  color: #afa8de;
+  font-size: ;
+  font-weight: ;
+}
+.footer-socials a{
+  color: #afa8de;
+  margin-right: 15px;
+}
+.footer-socials a:hover{
+  color: #FFF;
+  transition: 0.6s ease-out;
+}
+.footer-column h4{
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: ;
+  font-weight: ;
+  margin-bottom: 20px;
+  padding-top: 8px;
+}
+.footer-menu ul{
+  display: inline-block;
+}
+.footer-menu ul a{
+  display: block;
+  font-size: 13px;
+  color: #afa8de;
+  margin-bottom: 12px;
+}
+.footer-menu ul a:hover{
+  color: #FFF;
+  transition: 0.7s ease-out;
+}
+.footer-column ul li p{
+  display: block;
+  font-size: 13px;
+  color: #afa8de;
+  margin-bottom: 12px;
+}
+.footer-end{
+  border-top: 1px solid #afa8de;
+  padding: 15px 0;
+  text-align: center;
+}
+.footer-end p{
+  color: #afa8de;
+  font-size: ;
+  font-weight: ;
+  text-transform: ;
+  font-style: italic;
+}
+.footer-end a{
+  color: #afa8de;
+  font-size: ;
+  font-weight: ;
+  text-transform: ;
+  font-style: italic;
+}
+.footer-end a:hover{
+  color: #FFF;
+  transition: 0.7s ease-out;
+}
+.footer-socials {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,278 @@
+/*-----Cours-Details-----*//*-----Cours-Details-----*/
+#main{
+  width: 100%;
+  height: auto;
+}
+
+/*-----cours-details-----*/
+.cours-details{
+
+}
+
+.cours-details-info{
+  padding: 30px 0 20px 0;
+  color: #FFF;
+  background: #afa7dd;
+  position: relative;
+}
+.details-area{
+  position: relative;
+  margin-top: 50px;
+  max-width: 100%!important;
+  margin: 0 auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.details-info-left{
+  width: calc(100% - 340px);
+}
+.details-meta{
+  margin-bottom: 20px;
+}
+.details-meta-pull-left{
+  gap: 16px;
+  flex: 1;
+}
+.details-teacher{
+  margin-right: 0;
+  height: 100px;
+  flex: 1;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.details-teacher-image{
+  margin-right: 10px;
+  flex: 0 0 40px;
+}
+.details-teacher-image img{
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+  display: block;
+}
+.details-teacher-text label{
+  margin: 0;
+  color: #999;
+  font-size: ;
+  font-weight: ;
+  line-height: 1.5;
+  display: block;
+}
+.details-teacher-text a{
+  color: #FFF;
+  font-size: ;
+  font-weight: ;
+  text-transform: capitalize;
+}
+.details-category{
+  margin-right: 0;
+  height: 100px;
+  flex: 1;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.details-category span i{
+  font-weight: 400;
+  font-size: 4.25rem;
+  color: #F71C0D;
+  margin-right: 15px;
+}
+.details-category-info label{
+  margin: 0;
+  color: #999;
+  font-size: ;
+  font-weight: ;
+  line-height: 1.5;
+  display: block;
+}
+.details-category-info a{
+  color: #FFF;
+  font-size: ;
+  font-weight: 400;
+}
+.details-category-text a{
+  color: ;
+  font-size: ;
+  font-weight: ;
+  margin-right: 5px;
+}
+.details-category-text p{
+  color: ;
+  font-size: ;
+  font-weight: ;
+  margin-left: 5px;
+}
+.cours-title{
+  margin-bottom: 20px;
+  border-bottom: 1px solid #EBEBEB;
+  color: #FFF;
+  font-size: 35px;
+  font-weight: ;
+  padding-bottom: 20px;
+}
+.cours-meta-pull-left{
+  flex: 1;
+}
+.cours-meta-lesson{
+  height: auto;
+  margin-right: 45px;
+}
+.cours-meta-quiz{
+  height: auto;
+  margin-right: 45px;
+}
+
+.cours-content{
+  padding-top: 20px;
+}
+.section {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+/* Styles pour masquer les sections au départ */
+.hidden {
+    display: none;
+}
+/* Styles pour les boutons radio et labels */
+input[type="radio"] {
+    display: none;
+}
+.section-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f71c0d;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.section-label:hover {
+    background-color: #F0D43A;
+}
+input[type="radio"]:checked + label {
+    background-color: #F0D43A;
+}
+
+.cours-description h2{
+  color: ;
+  font-size: ;
+  font-weight: ;
+  margin-bottom: 20px;
+}
+.cours-description p{
+  color: ;
+  font-size: ;
+  font-weight: ;
+  margin-bottom: 20px;
+}
+.cours-focus h2{
+  color: ;
+  font-size: ;
+  font-weight: ;
+  margin-bottom: 20px;
+}
+.cours-focus ul{
+  list-style-type: square;
+  margin-left: 35px;
+}
+.cours-focus ul li{
+  color: ;
+  font-size: ;
+  font-weight: ;
+  margin: 10px 0 10px 0;
+}
+.cours-focus ul li:last-child{
+  margin-bottom: 20px;
+}
+.cours-objectives h2{
+  color: ;
+  font-size: ;
+  font-weight: ;
+  margin-bottom: 20px;
+}
+.cours-objectives p{
+  color: ;
+  font-size: ;
+  font-weight: ;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+.cours-teacher-image{
+  min-width: 200px;
+  max-width: 200px;
+  max-height: 230px;
+  margin-right: 25px;
+}
+.cours-teacher-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 2%;
+}
+.cours-teacher-name a p{
+  color: black;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 2;
+}
+.cours-teacher-bio{
+  margin-bottom: 20px;
+}
+.cours-teacher-bio p{
+  color: ;
+  font-size: ;
+  font-weight: ;
+  line-height: ;
+}
+.cours-reviews h3{
+  color: ;
+  font-size: ;
+  font-weight: ;
+  margin-bottom: 20px;
+}
+.cours-reviews-list{
+  margin: 0 0 30px;
+  padding: 0px;
+}
+.cours-reviews-list ul li{
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #EBEBEB;
+  display: flex;
+}
+.cours-reviews-author{
+  width: 70px;
+  margin-right: 25px;
+  float: left;
+  min-width: 70px;
+}
+.cours-reviews-author img{
+  width: 70px;
+  max-height: 100px;
+  height: 70px;
+  border-radius: 100%;
+  margin-right: 25px;
+  object-fit: cover;
+}
+.cours-reviews-author-info{
+  float: left;
+}
+.reviews-title{
+  clear: both;
+  color: ;
+  font-size: ;
+  font-weight: ;
+  line-height: ;
+  display: block;
+  margin: 0 0 10px;
+}

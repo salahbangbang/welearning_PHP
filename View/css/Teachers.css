@@ -1,0 +1,85 @@
+/*-----Teachers-----*//*-----Teachers-----*/
+#main{
+  width: 100%;
+  height: auto;
+}
+
+/*-----main-----*/
+.main{
+  background-image: url('../../assets/image/Teachers.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.overlay{
+  background: rgba(21, 20, 30, 0.5);
+}
+.main-wrap{
+  height: 300px;
+  padding-top: ;
+}
+.main-wrap h1{
+  color: #FFF;
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: ;
+}
+.main-wrap p{
+  color: #FFF;
+  font-size: ;
+  font-weight: ;
+  text-transform: ;
+}
+
+/*-----teacher-list-----*/
+.teacher-list{
+  padding: 50px 0;
+  position: relative;
+}
+.teacher-card{
+  flex: 0 0 25%;
+  max-width: 25%;
+  border: 1px solid #ebebeb;
+  padding: 5px;
+}
+.staff{
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.teacher-image{
+  height: 300px;
+}
+.teacher-image img{
+  width: 100%;
+  display: block;
+  background-position: top center;
+}
+.teacher-text h3{
+  font-size: 20px;
+  font-weight: ;
+  margin-bottom: 5px;
+}
+.teacher-text span{
+  text-transform: uppercase;
+  color: #B3B3B3;
+  display: block;
+  margin-bottom: 5px;
+}
+.teacher-introduction{
+  opacity: 1;
+}
+.teacher-introduction p{
+  margin-bottom: 1rem;
+}
+.teacher-socials li{
+  margin-right: 10px;
+  display: inline-block;
+}
+.teacher-socials li a span i{
+  color: #ebebeb;
+  font-size: 25px;
+}
+.teacher-socials li a span i:hover{
+  color: #pink;
+  transition: 0.7s ease-out
+}

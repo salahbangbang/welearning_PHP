@@ -1,0 +1,32 @@
+/*-----About-----*//*-----About-----*/
+#main{
+  width: 100%;
+  height: auto;
+}
+
+/*-----main-----*/
+.main{
+  background-image: url('../../assets/image/.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.overlay{
+  background: rgba(21, 20, 30, 0.5);
+}
+.main-wrap{
+  height: 300px;
+  padding-top: ;
+}
+.main-wrap h1{
+  color: #FFF;
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: ;
+}
+.main-wrap p{
+  color: #FFF;
+  font-size: ;
+  font-weight: ;
+  text-transform: ;
+}

@@ -1,0 +1,57 @@
+/*----header----*/
+#header{
+  width: 100%;
+  height: 50px;
+  background-color: #e6e6e6 ;
+}
+/*--------logo--------*/
+#logo{
+  width: 20%;
+  height:50px;
+  float: left;
+}
+#logo h1{
+  text-align: center;
+  line-height: 50px;
+  background-image: linear-gradient(#fff, #fff);
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  transition: background-size .7s, background-position .5s ease-in-out;
+}
+#logo h1:hover{
+  background-size: 100% 100%;
+  background-position: 0% 100%;
+  transition: background-position .7s, background-size .5s ease-in-out;
+}
+#logo a{
+  color: #404040;
+  font-size: 35px;
+}
+
+/*--------title--------*/
+#title{
+  width: 70%;
+  height:50px;
+  float: left;
+}
+#title h2{
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-weight: 100;
+  font-size: 40px;
+}
+/*--------link--------*/
+#link{
+  width: 10%;
+  height:50px;
+  float: left;
+}
+#link h3{
+  text-align: center;
+  line-height: 50px;
+}
+#link a{
+  color: #bfbfbf;
+  font-size: 20px;
+}

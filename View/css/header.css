@@ -1,0 +1,241 @@
+/*-----Site-header-----*//*-----Site-header-----*/
+#site-header{
+  width: 100%;
+  height: auto;
+}
+
+/*-----Header-----*/
+.header{
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+/*-----Top-header-----*/
+.top-header{
+  background: #000;
+}
+.header-mail{
+  padding-left: 10px;
+  border-right: 1px solid #ebebeb;
+}
+.fa-envelope{
+  margin-right: 10px;
+  font-size: 15px;
+  color: #ebebeb;
+}
+.header-mail a{
+  color: #ebebeb;
+  font-size: 12px;
+  font-weight: 400;
+}
+.fa-phone{
+  margin-right: 10px;
+  font-size: 15px;
+  color: #ebebeb;
+}
+.header-phone p{
+  color: #ebebeb;
+  font-size: 12px;
+  font-weight: 400;
+}
+.header-phone, .header-mail{
+  padding: 10px 20px;
+}
+.top-right{
+  flex: 1 0 75%;
+}
+.header-welcome p{
+  color: #ebebeb;
+  font-size: 16px;
+  font-weight: 400;
+}
+.header-user ul{
+  padding: 0 13px 0 26px;
+}
+.header-user li a{
+  position: relative;
+  display: block;
+  padding: 0 10px 0 5px;
+  color: #ebebeb;
+}
+.header-user li a::after{
+  content: '|';
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.header-user li:last-child a{
+  padding-right: 0;
+  margin-right: 0;
+}
+.header-user li:last-child a:after{
+  content: none;
+}
+
+/*-----Bottom-header-----*/
+.header-logo{
+  float: left;
+}
+.header-logo img{
+  vertical-align: middle;
+}
+.header-menu{
+  margin-left: 25px;
+  display: block;
+}
+.header-menu ul li{
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+}
+.header-menu ul li a{
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 21px 7px;
+  text-transform: capitalize;
+}
+.header-menu ul li a{
+  background-image: linear-gradient(
+    to right, #f71c0d, #f71c0d 50%, #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  /*padding: 5px 0;*/
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.header-menu ul li a:before{
+  content: '';
+  background: #f71c0d;
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.header-menu ul li a:hover {
+ background-position: 0;
+}
+.header-menu ul li a:hover::before{
+  width: 100%;
+}
+.header-menu-submenu{
+  position: absolute;
+  width: 130px;
+  background: red;
+  left: 0;
+  top: 120%;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+  padding: 12px 0;
+  transition: all .3s ease-out 0s;
+}
+.header-menu-submenu:hover{
+  visibility: visible;
+  opacity: 1;
+}
+.header-menu-submenu ul li{
+  margin-left: 7px;
+  display: block;
+  position: relative;
+  margin: 0 10px;
+}
+.header-menu-submenu ul li a{
+  padding: 6px 10px !important;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.bottom-right{
+  float: right;
+}
+
+.header-sticky{
+  left: 0;
+  margin: auto;
+  position: sticky; /*fixed*/
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+}
+@keyframes fadeInDown
+  0%{
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+}
+
+.profile a:hover{
+  color: pink;
+  transition: 0.7s ease-out;
+}
+
+
+
+
+
+
+.button-19 {
+  appearance: button;
+  background-color: #9f0a00;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #f61203;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+.button-19:disabled {
+  cursor: auto;
+}
+.button-19:active {
+  border-width: 4px 0 0;
+  background: none;
+}

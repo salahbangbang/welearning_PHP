@@ -1,0 +1,280 @@
+/*----bodyright----*/
+#bodyright{
+  width: 80%;
+  height: 100vh;
+  background: #fff;
+  float: left;
+  overflow-y: auto;
+}
+#bodyright h3{
+  height: 30px;
+  background-color: #808080;
+  margin-bottom: 2%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+/*----add----*/
+#add{
+  width: 80%;
+  margin: auto;
+  padding: 1%;
+  box-sizing: border-box;
+}
+#add details{
+  width: 65%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+#add details[open] summary ~ *{
+  animation: sweep .5s ease-in-out;
+  animation-iteration-count: 1;
+}
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
+}
+#add details summary{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #000;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+#add details form{
+  background: ;
+  padding: ;
+  box-sizing: border-box;
+}
+#add details form input{
+  width: 100%;
+  height: 30px;
+  outline: none;
+  padding: 1%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+#add details form textarea{
+  resize: none;
+  width: 100%;
+  height: 175px;
+  outline: none;
+  padding: 1%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+#add details button{
+  width: 30%;
+  padding: 2%;
+  outline: none;
+  border-width: 1px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  cursor: pointer;
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: var(--_g) calc(var(--_p,0%) - 100%) 0%,
+   var(--_g) calc(200% - var(--_p,0%)) 0%,
+   var(--_g) calc(var(--_p,0%) - 100%) 100%,
+   var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+#add details button:hover{
+  color: #fff;
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+#add details button:active{
+  box-shadow: 0 0 9e9q inset #0009;
+  background-color: var(--c);
+  color: #fff;
+}
+#add details select{
+  width: 20%;
+  padding: 1%;
+  outline: none;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+#add span button{
+  background-color: #e6e6e6;
+  border-radius: 2px;
+  border-width: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 10px;
+  padding: 5px 5px;
+  text-align: center;
+  transition: all 200ms;
+  margin-bottom: 10px;
+}
+#add table{
+  width: 100%;
+  margin: ;
+}
+#add table tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+#add table tr:hover{
+  background-color: #ddd;
+}
+#add table tr th{
+  height: 30px;
+  background: #e6e6e6;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 800;
+}
+#add table tr td{
+  height: 25px;
+  box-sizing: border-box;
+  font-size: ;
+  text-align: center;
+  padding: 8px;
+}
+/*----contact----*/
+#contact{
+  width: 80%;
+  margin: auto;
+  padding: 1%;
+  box-sizing: border-box;
+}
+#contact details{
+  width: 65%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+#contact details[open] summary ~ *{
+  animation: sweep .5s ease-in-out;
+  animation-iteration-count: 1;
+}
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
+}
+#contact details summary{
+  width: 100%;
+  height: 30px;
+  color: ;
+  line-height: 30px;
+  border: 1px solid #000;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+#contact form table{
+  width: 70%;
+  padding: 5%;
+  box-sizing: border-box;
+  margin: auto;
+}
+#contact form table tr td{
+  width: 50%;
+  height: 25px;
+}
+#contact form table tr td input{
+  width: 100%;
+  height: 20px;
+  outline: none;
+  margin-bottom: 10px;
+}
+#contact form button{
+  width: 30%;
+  padding: 2%;
+  outline: none;
+  border-width: 1px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  cursor: pointer;
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: var(--_g) calc(var(--_p,0%) - 100%) 0%,
+   var(--_g) calc(200% - var(--_p,0%)) 0%,
+   var(--_g) calc(var(--_p,0%) - 100%) 100%,
+   var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+#contact form button:hover{
+  color: #fff;
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+#contact form button:active{
+  box-shadow: 0 0 9e9q inset #0009;
+  background-color: var(--c);
+  color: #fff;
+}
+
+/*----about----*/
+#about{
+  width: 80%;
+  margin: auto;
+  padding: 1%;
+  box-sizing: border-box;
+}
+#about details{
+  width: 65%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+#about details[open] summary ~ *{
+  animation: sweep .5s ease-in-out;
+  animation-iteration-count: 1;
+}
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
+}
+#about details summary{
+  width: 100%;
+  height: 30px;
+  color: ;
+  line-height: 30px;
+  border: 1px solid #000;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+#about textarea{
+  width: 100%;
+  height: 200px;
+  outline: none;
+  resize: none;
+  padding: 1%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+#about button{
+  width: 30%;
+  padding: 2%;
+  outline: none;
+  border-width: 1px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  cursor: pointer;
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: var(--_g) calc(var(--_p,0%) - 100%) 0%,
+   var(--_g) calc(200% - var(--_p,0%)) 0%,
+   var(--_g) calc(var(--_p,0%) - 100%) 100%,
+   var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+#about button:hover{
+  color: #fff;
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+#about button:active{
+  box-shadow: 0 0 9e9q inset #0009;
+  background-color: var(--c);
+  color: #fff;
+}
