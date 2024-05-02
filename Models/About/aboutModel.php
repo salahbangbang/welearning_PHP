@@ -11,7 +11,7 @@ class About
 
     public function readAbout()
       {
-        $req = $this->database->prepare("SELECT * FROM about");
+        $req = $this->database->prepare("SELECT * FROM About");
 			    $req->execute();
 
 			      return $req->fetchAll();

@@ -10,7 +10,7 @@ class Cours
       }
     public function createCours($cours_photo, $cours_name, $cours_description, $cours_learn_1, $cours_learn_2, $cours_learn_3, $cours_learn_4, $cours_learn_5, $cours_objective, $cours_curriculum_1, $cours_user_id, $cours_category_id, $cours_category_sub_id)
       {
-        $req = $this->database->prepare("INSERT INTO cours(cours_photo, cours_name, cours_description, cours_learn_1, cours_learn_2, cours_learn_3, cours_learn_4, cours_learn_5, cours_objective, cours_curriculum_1, cours_user_id, cours_category_id, cours_category_sub_id) VALUES (:cours_photo, :cours_name, :cours_description, :cours_learn_1, :cours_learn_2, :cours_learn_3, :cours_learn_4, :cours_learn_5, :cours_objective, :cours_curriculum_1, :cours_user_id, :cours_category_id, :cours_category_sub_id)");
+        $req = $this->database->prepare("INSERT INTO Cours(cours_photo, cours_name, cours_description, cours_learn_1, cours_learn_2, cours_learn_3, cours_learn_4, cours_learn_5, cours_objective, cours_curriculum_1, cours_user_id, cours_category_id, cours_category_sub_id) VALUES (:cours_photo, :cours_name, :cours_description, :cours_learn_1, :cours_learn_2, :cours_learn_3, :cours_learn_4, :cours_learn_5, :cours_objective, :cours_curriculum_1, :cours_user_id, :cours_category_id, :cours_category_sub_id)");
 
           $req->bindParam(":cours_photo", $cours_photo);
           $req->bindParam(":cours_name", $cours_name);
@@ -31,27 +31,27 @@ class Cours
       }
     public function readCours()
       {
-        $req = $this->database->prepare("SELECT * FROM cours INNER JOIN category ON cours.cours_category_id = category.category_id INNER JOIN category_sub ON cours.cours_category_sub_id = category_sub.category_sub_id INNER JOIN user ON cours.cours_user_id = user.user_id");
+        $req = $this->database->prepare("SELECT * FROM Cours INNER JOIN category ON cours.cours_category_id = category.category_id INNER JOIN category_sub ON cours.cours_category_sub_id = category_sub.category_sub_id INNER JOIN user ON cours.cours_user_id = user.user_id");
           $req->execute();
 
             return $req->fetchAll();
       }
     public function deleteCours($cours_id)
      {
-        $req = $this->database->prepare("DELETE FROM cours WHERE cours_id = ?");
+        $req = $this->database->prepare("DELETE FROM Cours WHERE cours_id = ?");
 
             return $req->execute([$cours_id]);
       }
     public function readCoursByUser()
       {
-        $req = $this->database->prepare("SELECT * FROM cours INNER JOIN user ON cours.cours_user_id = user.user_id WHERE cours.cours_id = user.user_id");
+        $req = $this->database->prepare("SELECT * FROM Cours INNER JOIN user ON cours.cours_user_id = user.user_id WHERE cours.cours_id = user.user_id");
         $req->execute();
 
             return $req->fetchAll();
       }
     public function readCoursByID($cours_id)
       {
-        $req = $this->database->prepare('SELECT * FROM cours INNER JOIN category ON cours.cours_category_id = category.category_id INNER JOIN category_sub ON cours.cours_category_sub_id = category_sub.category_sub_id INNER JOIN user ON cours.cours_user_id = user.user_id WHERE cours_id = ?');
+        $req = $this->database->prepare('SELECT * FROM Cours INNER JOIN category ON cours.cours_category_id = category.category_id INNER JOIN category_sub ON cours.cours_category_sub_id = category_sub.category_sub_id INNER JOIN user ON cours.cours_user_id = user.user_id WHERE cours_id = ?');
           $req->execute([$cours_id]);
 
             return $req->fetch();

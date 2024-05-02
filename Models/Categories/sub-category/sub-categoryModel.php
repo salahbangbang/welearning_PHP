@@ -10,7 +10,7 @@ class Subcategory
       }
     public function createSubcategory($category_sub_name, $category_sub_description, $category_id)
       {
-        $req = $this->database->prepare("INSERT INTO category_sub(category_sub_name, category_sub_description, category_id) VALUES (:category_sub_name, :category_sub_description, :category_id)");
+        $req = $this->database->prepare("INSERT INTO Category_sub(category_sub_name, category_sub_description, category_id) VALUES (:category_sub_name, :category_sub_description, :category_id)");
           $req->bindParam(":category_sub_name", $category_sub_name);
           $req->bindParam(":category_sub_description", $category_sub_description);
           $req->bindParam(":category_id", $category_id);
@@ -26,7 +26,7 @@ class Subcategory
       }
     public function updateSubcategory($category_sub_name, $category_sub_description, $category_id, $category_sub_id)
       {
-        $req = $this->database->prepare("UPDATE category_sub SET category_sub_name = :category_sub_name, category_sub_description = :category_sub_description, category_id = :category_id ,category_sub_id = :category_sub_id WHERE category_sub_id = :category_sub_id");
+        $req = $this->database->prepare("UPDATE Category_sub SET category_sub_name = :category_sub_name, category_sub_description = :category_sub_description, category_id = :category_id ,category_sub_id = :category_sub_id WHERE category_sub_id = :category_sub_id");
           $req->bindParam(":category_sub_name", $category_sub_name);
           $req->bindParam(":category_sub_description", $category_sub_description);
           $req->bindParam(":category_id", $category_id);
@@ -36,7 +36,7 @@ class Subcategory
       }
     public function deleteSubcategory($category_sub_id)
       {
-        $req = $this->database->prepare("DELETE FROM category_sub WHERE category_sub_id = ?");
+        $req = $this->database->prepare("DELETE FROM Category_sub WHERE category_sub_id = ?");
 
             return $req->execute([$category_sub_id]);
       }
@@ -44,7 +44,7 @@ class Subcategory
 //autres fonctions
     public function allSubcategoryByCategory()
       {
-        $req = $this->database->prepare("SELECT * FROM category_sub INNER JOIN category ON category.category_id = category_sub.category_id WHERE category.category_id = category_sub.category_id");
+        $req = $this->database->prepare("SELECT * FROM Category_sub INNER JOIN category ON category.category_id = category_sub.category_id WHERE category.category_id = category_sub.category_id");
           $req->execute();
 
             return $req->fetchAll();

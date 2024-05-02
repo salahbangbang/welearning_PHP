@@ -10,7 +10,7 @@ class Newsletter
       }
     public function createNewsletter($newsletter_email)
       {
-        $req = $this->database->prepare("INSERT INTO newsletter(newsletter_email) VALUES (:newsletter_email)");
+        $req = $this->database->prepare("INSERT INTO Newsletter(newsletter_email) VALUES (:newsletter_email)");
           $req->bindParam(":newsletter_email", $newsletter_email);
 
             return $req->execute();
