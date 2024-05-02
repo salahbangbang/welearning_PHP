@@ -10,7 +10,7 @@ class UserType
       }
     public function createUsertype($user_type_name, $user_type_description)
       {
-        $req = $this->database->prepare("INSERT INTO user_type(user_type_name, user_type_description) VALUES (:user_type_name, :user_type_description)");
+        $req = $this->database->prepare("INSERT INTO User_type(user_type_name, user_type_description) VALUES (:user_type_name, :user_type_description)");
           $req->bindParam(":user_type_name", $user_type_name);
           $req->bindParam(":user_type_description", $user_type_description);
 
@@ -18,7 +18,7 @@ class UserType
       }
     public function readUsertype()
       {
-        $req = $this->database->prepare("SELECT * FROM user_type");
+        $req = $this->database->prepare("SELECT * FROM User_type");
 			    $req->execute();
 
 			      return $req->fetchAll();
@@ -28,7 +28,7 @@ class UserType
       {
         //var_dump($categoryName, $categoryDescription, $categoryID);
         //die();
-        $req = $this->database->prepare("UPDATE user_type SET user_type_name = :user_type_name, user_type_description = :user_type_description WHERE user_type_id = :user_type_id");
+        $req = $this->database->prepare("UPDATE User_type SET user_type_name = :user_type_name, user_type_description = :user_type_description WHERE user_type_id = :user_type_id");
           $req->bindParam(":user_type_name", $user_type_name);
           $req->bindParam(":user_type_description", $user_type_description);
           $req->bindParam(":user_type_id", $user_type_id);
@@ -37,7 +37,7 @@ class UserType
       }
     public function deleteUsertype($user_type_id)
       {
-        $req = $this->database->prepare("DELETE FROM user_type WHERE user_type_id = ?");
+        $req = $this->database->prepare("DELETE FROM User_type WHERE user_type_id = ?");
 
             return $req->execute([$user_type_id]);
       }
@@ -45,14 +45,14 @@ class UserType
 //autres fonctions
     public function readUsertypeByName($user_type_name)
       {
-        $req = $this->database->prepare("SELECT count(*) FROM user_type WHERE user_type_name = '".$user_type_name."'");
+        $req = $this->database->prepare("SELECT count(*) FROM User_type WHERE user_type_name = '".$user_type_name."'");
   		    $req->execute();
 
   			    return $req->fetch();
       }
     public function readUsertypeByID($user_type_id)
       {
-        $req = $this->database->prepare('SELECT * FROM user_type WHERE user_type_id = ?');
+        $req = $this->database->prepare('SELECT * FROM User_type WHERE user_type_id = ?');
           $req->execute([$user_type_id]);
 
             return $req->fetch();
@@ -61,7 +61,7 @@ class UserType
     public function readUsertypeSTW()
       {
        //$req = $this->database->prepare("SELECT * FROM user_type WHERE user_typeName IN ('Student', 'Teacher', 'Writter')");
-        $req = $this->database->prepare("SELECT * FROM user_type WHERE user_type_name LIKE 'S%' OR user_type_name LIKE 'T%' OR user_type_name LIKE 'W%'");
+        $req = $this->database->prepare("SELECT * FROM User_type WHERE user_type_name LIKE 'S%' OR user_type_name LIKE 'T%' OR user_type_name LIKE 'W%'");
      }
 
   }

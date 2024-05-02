@@ -11,14 +11,14 @@ class Contact
 
     public function readContact()
       {
-        $req = $this->database->prepare("SELECT * FROM contact");
+        $req = $this->database->prepare("SELECT * FROM Contact");
 			    $req->execute();
 
 			      return $req->fetchAll();
       }
     public function updateContact($contactEmail, $contactFB, $contactTW, $contactPhone, $contactID)
       {
-        $req = $this->database->prepare("UPDATE contact SET contactEmail = :contactEmail, contactFB = :contactFB, contactTW = :contactTW, contactPhone = :contactPhone, contactID = :contactID WHERE contactID = :contactID");
+        $req = $this->database->prepare("UPDATE Contact SET contactEmail = :contactEmail, contactFB = :contactFB, contactTW = :contactTW, contactPhone = :contactPhone, contactID = :contactID WHERE contactID = :contactID");
           $req->bindParam(":contactEmail", $contactEmail);
           $req->bindParam(":contactFB", $contactFB);
           $req->bindParam(":contactTW", $contactTW);

@@ -10,7 +10,7 @@ class Category
       }
     public function createCategory($category_logo, $category_name, $category_description)
       {
-        $req = $this->database->prepare("INSERT INTO category(category_logo, category_name, category_description) VALUES (:category_logo, :category_name, :category_description)");
+        $req = $this->database->prepare("INSERT INTO Category(category_logo, category_name, category_description) VALUES (:category_logo, :category_name, :category_description)");
           $req->bindParam(":category_logo", $category_logo);
           $req->bindParam(":category_name", $category_name);
           $req->bindParam(":category_description", $category_description);
@@ -19,7 +19,7 @@ class Category
       }
     public function readCategory()
       {
-        $req = $this->database->prepare("SELECT * FROM category");
+        $req = $this->database->prepare("SELECT * FROM Category");
 			    $req->execute();
 
 			      return $req->fetchAll();
@@ -28,7 +28,7 @@ class Category
       {
         //var_dump($categoryName, $categoryDescription, $categoryID);
         //die();
-        $req = $this->database->prepare("UPDATE category SET category_logo = :category_logo, category_name = :category_name, category_description = :category_description WHERE category_id = :category_id");
+        $req = $this->database->prepare("UPDATE Category SET category_logo = :category_logo, category_name = :category_name, category_description = :category_description WHERE category_id = :category_id");
           $req->bindParam(":category_logo", $category_logo);
           $req->bindParam(":category_name", $category_name);
           $req->bindParam(":category_description", $category_description);
@@ -38,7 +38,7 @@ class Category
       }
     public function deleteCategory($category_id)
       {
-        $req = $this->database->prepare("DELETE FROM category WHERE category_id = ?");
+        $req = $this->database->prepare("DELETE FROM Category WHERE category_id = ?");
 
             return $req->execute([$category_id]);
       }
@@ -46,14 +46,14 @@ class Category
 //autres fonctions
     public function readCategoryByName($category_name)
       {
-        $req = $this->database->prepare("SELECT count(*) FROM category where category_name = '".$category_name."'");
+        $req = $this->database->prepare("SELECT count(*) FROM Category where category_name = '".$category_name."'");
   		    $req->execute();
 
   			    return $req->fetch();
       }
     public function readCategoryByID($category_id)
       {
-        $req = $this->database->prepare('SELECT * FROM category WHERE category_id = ?');
+        $req = $this->database->prepare('SELECT * FROM Category WHERE category_id = ?');
           $req->execute([$category_id]);
 
             return $req->fetch();

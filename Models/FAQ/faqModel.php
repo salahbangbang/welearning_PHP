@@ -10,7 +10,7 @@ class Faq
       }
     public function createFaq($faq_question, $faq_answer)
       {
-        $req = $this->database->prepare("INSERT INTO faq(faq_question, faq_answer) VALUES (:faq_question, :faq_answer)");
+        $req = $this->database->prepare("INSERT INTO Faq(faq_question, faq_answer) VALUES (:faq_question, :faq_answer)");
           $req->bindParam(":faq_question", $faq_question);
           $req->bindParam(":faq_answer", $faq_answer);
 
@@ -18,7 +18,7 @@ class Faq
       }
     public function readFaq()
       {
-        $req = $this->database->prepare("SELECT * FROM faq");
+        $req = $this->database->prepare("SELECT * FROM Faq");
 			    $req->execute();
 
 			      return $req->fetchAll();
@@ -26,7 +26,7 @@ class Faq
 
     public function deleteFaq($faq_id)
       {
-        $req = $this->database->prepare("DELETE FROM faq WHERE faq_id = ?");
+        $req = $this->database->prepare("DELETE FROM Faq WHERE faq_id = ?");
 
             return $req->execute([$faq_id]);
       }
@@ -35,7 +35,7 @@ class Faq
 //autres fonctions
     public function readFaqByQuestion($faq_question)
       {
-        $req = $this->database->prepare("SELECT count(*) FROM faq where faq_question = '".$faq_question."'");
+        $req = $this->database->prepare("SELECT count(*) FROM Faq where faq_question = '".$faq_question."'");
           $req->execute();
 
         		return $req->fetch();
