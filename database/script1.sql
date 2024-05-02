@@ -6,6 +6,7 @@ USE Welearn1;
     category_id INT NOT NULL auto_increment,
     category_logo VARCHAR (100) NOT NULL,
     category_name VARCHAR (50) NOT NULL,
+    category_salle VARCHAR (20) NOT NULL,
     category_description TEXT NOT NULL,
 
       PRIMARY KEY(category_id)
@@ -72,48 +73,50 @@ USE Welearn1;
       PRIMARY KEY(user_type_id)
   );
 
-  CREATE TABLE User (
-  user_id int(11) NOT NULL,
-  user_photo longblob DEFAULT NULL,
-  user_last_name varchar(50) NOT NULL,
-  user_first_name varchar(50) NOT NULL,
-  user_email varchar(100) NOT NULL,
-  user_name varchar(50) NOT NULL,
-  user_diplome longblob DEFAULT NULL,
-  user_certificat longblob DEFAULT NULL,
-  user_password varchar(50) NOT NULL,
-  user_type_id int(11) NOT NULL,
+  CREATE TABLE User(
+    user_id  INT NOT NULL auto_increment,
+    user_photo LONGBLOB,
+    user_last_name VARCHAR (50) NOT NULL,
+    user_first_name VARCHAR (50) NOT NULL,
+    user_email VARCHAR (100) NOT NULL,
+    user_name VARCHAR (50) NOT NULL,
+    user_diplome LONGBLOB,
+    user_certificat LONGBLOB,
+
+    user_password VARCHAR (50) NOT NULL,
+    user_type_id INT NOT NULL,
 
       PRIMARY KEY(user_id),
       FOREIGN KEY(user_type_id) REFERENCES User_type(user_type_id)
   );
 
-  CREATE TABLE Term (
-  term_id int(11) NOT NULL,
-  term_name varchar(100) NOT NULL,
-  term_content text NOT NULL,
-  user_type_id int(11) NOT NULL,
+  CREATE TABLE Term(
+    term_id INT NOT NULL auto_increment,
+    term_name VARCHAR (100) NOT NULL,
+    term_content TEXT NOT NULL,
+    user_type_id INT NOT NULL,
 
       PRIMARY KEY(term_id),
       FOREIGN KEY(user_type_id) REFERENCES User_type(user_type_id)
   );
 
 
-  CREATE TABLE Cours (
-  cours_id int(11) NOT NULL,
-  cours_photo longblob NOT NULL,
-  cours_name varchar(100) NOT NULL,
-  cours_description text NOT NULL,
-  cours_learn_1 varchar(100) NOT NULL,
-  cours_learn_2 varchar(100) NOT NULL,
-  cours_learn_3 varchar(100) NOT NULL,
-  cours_learn_4 varchar(100) DEFAULT NULL,
-  cours_learn_5 varchar(100) DEFAULT NULL,
-  cours_objective text NOT NULL,
-  cours_curriculum_1 longblob NOT NULL,
-  cours_user_id int(11) NOT NULL,
-  cours_category_id int(11) NOT NULL,
-  cours_category_sub_id int(11) NOT NULL,
+  CREATE TABLE Cours(
+    cours_id INT NOT NULL auto_increment,
+    cours_photo LONGBLOB NOT NULL,
+    cours_name VARCHAR (100) NOT NULL,
+    cours_description TEXT NOT NULL,
+    cours_learn_1 VARCHAR (100) NOT NULL,
+    cours_learn_2 VARCHAR (100) NOT NULL,
+    cours_learn_3 VARCHAR (100) NOT NULL,
+    cours_learn_4 VARCHAR (100),
+    cours_learn_5 VARCHAR (100),
+    cours_objective TEXT NOT NULL,
+    cours_curriculum_1 LONGBLOB NOT NULL,
+
+    cours_user_id INT NOT NULL,
+    cours_category_id INT NOT NULL,
+    cours_category_sub_id INT NOT NULL,
 
       PRIMARY KEY(cours_id),
       FOREIGN KEY(cours_user_id) REFERENCES User(user_id),
