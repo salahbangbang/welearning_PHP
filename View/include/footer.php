@@ -14,8 +14,10 @@
                 <p><?php echo $about['about_summary'] ?></p>
               <?php } ?>
               <div class="footer-socials">
+              <?php foreach($AllInformation as $information) { ?>
                 <a href="<?php echo $information['information_facebook']; ?>"><i class="fa-brands fa-facebook"></i></a>
                 <a href="<?php echo $information['information_twitter']; ?>"><i class="fa-brands fa-twitter"></i></a>
+              <?php } ?>  
               </div>
           </div>
         </div>
