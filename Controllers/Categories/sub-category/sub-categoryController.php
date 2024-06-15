@@ -35,23 +35,23 @@
       if($count[0] === '1'){
 
           echo "<script>alert('La Sous-Catégorie existe déjà !')</script>";
-          echo "<script>window.open('../../../View/admin/index.php?sub-categories','_self')</script>";
+          echo "<script>window.open('../../../View/Admin/index.php?sub-categories','_self')</script>";
       }else{
 
         $this->subcategory->createSubcategory($_POST['category_sub_name'], $_POST['category_sub_description'], $_POST['category_id']);
           echo "<script>alert('Félicitation la Sous-Catégorie a bien été Créée')</script>";
-          echo "<script>window.open('../../../View/admin/index.php?sub-categories','_self')</script>";
+          echo "<script>window.open('../../../View/Admin/index.php?sub-categories','_self')</script>";
             }
       }
       public function delete(){
         $this->subcategory->deleteSubcategory($_POST['deleteSubcategory']);
           echo "<script>alert('La Sous-Catégorie a bien été Supprimée')</script>";
-          echo "<script>window.open('../../../View/admin/index.php?sub-categories','_self')</script>";
+          echo "<script>window.open('../../../View/Admin/index.php?sub-categories','_self')</script>";
       }
       public function update(){
         $this->subcategory->updateSubcategory($_POST["category_sub_name"], $_POST["category_sub_description"], $_POST["category_id"], $_POST["category_sub_id"]);
             echo "<script>alert('La Sous-Catégorie a bien été Modifiée')</script>";
-            echo "<script>window.open('../../../View/admin/index.php?sub-categories','_self')</script>";
+            echo "<script>window.open('../../../View/Admin/index.php?sub-categories','_self')</script>";
       }
 
   }

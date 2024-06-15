@@ -32,7 +32,7 @@
       {
         $this->message->createMessage($_POST['message_name'], $_POST['message_email'], $_POST['message_sujet'], $_POST['message_content']);
           echo "<script>alert('Félicitation le message a bien été envoyé !')</script>";
-          echo "<script>window.open('../../View/contact.php','_self')</script>";
+          echo "<script>window.open('../../View/Contact.php','_self')</script>";
       }
       public function delete()
        {

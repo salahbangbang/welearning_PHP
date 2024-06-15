@@ -29,7 +29,7 @@
           //var_dump($_POST);
           //die();
             echo "<script>alert('La page About bien été Modifiée(s)')</script>";
-            echo "<script>window.open('../../View/admin/index.php?about','_self')</script>";
+            echo "<script>window.open('../../View/Admin/index.php?about','_self')</script>";
       }
   }
 

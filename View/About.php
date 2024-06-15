@@ -42,6 +42,7 @@
 				<p><?php echo "Réponse: " .$faq['faq_answer'];?></p>
 				<?php } ?>
     </div>
+
     <div id="term" class="term">
 			<h1>Terms & Conditions</h1>
 			<?php foreach($AllTerm as $term) { ?>
@@ -50,7 +51,6 @@
 				<p><?php echo "A qui ce Term s'adresse t-il ? " .$term['user_type_name'];?></p>
 			<?php } ?>
 		</div>
-
 
   </div>
 
