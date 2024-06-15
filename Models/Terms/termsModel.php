@@ -49,7 +49,7 @@ class Term
       }
     public function readTermByCible()
       {
-        $req = $this->database->prepare('SELECT * FROM Term INNER JOIN user_type ON term.user_type_id = user_type.user_type_id WHERE term.user_type_id = user_type.user_type_id');
+        $req = $this->database->prepare('SELECT * FROM Term INNER JOIN User_type ON Term.user_type_id = User_type.user_type_id WHERE Term.user_type_id = User_type.user_type_id');
           $req->execute();
 
           return $req->fetchAll();

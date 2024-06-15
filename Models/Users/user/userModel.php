@@ -22,7 +22,7 @@ class User
       }
     public function readUser()
       {
-        $req = $this->database->prepare("SELECT * FROM User INNER JOIN user_type ON user.user_type_id = user_type.user_type_id");
+        $req = $this->database->prepare("SELECT * FROM User INNER JOIN User_type ON User.user_type_id = User_type.user_type_id");
 			    $req->execute();
 
 			      return $req->fetchAll();
@@ -81,21 +81,21 @@ class User
 
     public function readUserByStudent()
       {
-        $req = $this->database->prepare('SELECT * FROM User INNER JOIN user_type ON user.user_type_id = user_type.user_type_id WHERE user_type.user_type_name LIKE "S%" ');
+        $req = $this->database->prepare('SELECT * FROM User INNER JOIN User_type ON User.user_type_id = User_type.user_type_id WHERE User_type.user_type_name LIKE "S%" ');
           $req->execute();
 
             return $req->fetchAll();
       }
     public function readUserByTeacher()
         {
-          $req = $this->database->prepare('SELECT * FROM User INNER JOIN user_type ON user.user_type_id = user_type.user_type_id WHERE user_type.user_type_name LIKE "T%" ');
+          $req = $this->database->prepare('SELECT * FROM User INNER JOIN User_type ON User.user_type_id = User_type.user_type_id WHERE User_type.user_type_name LIKE "T%" ');
             $req->execute();
 
               return $req->fetchAll();
         }
     public function readUserByWritter()
         {
-          $req = $this->database->prepare('SELECT * FROM User INNER JOIN user_type ON user.user_type_id = user_type.user_type_id WHERE user_type.user_type_name LIKE "W%" ');
+          $req = $this->database->prepare('SELECT * FROM User INNER JOIN User_type ON User.user_type_id = User_type.user_type_id WHERE User_type.user_type_name LIKE "W%" ');
             $req->execute();
 
               return $req->fetchAll();
@@ -104,7 +104,7 @@ class User
 
     public function checkUserLogin($user_name, $user_password)
       {
-          $req = $this->database->prepare('SELECT * FROM User INNER JOIN user_type ON user.user_type_id = user_type.user_type_id WHERE user.user_name = ? AND user.user_password = ?');
+          $req = $this->database->prepare('SELECT * FROM User INNER JOIN User_type ON User.user_type_id = User_type.user_type_id WHERE User.user_name = ? AND user.user_password = ?');
           $req->execute([$user_name, $user_password]);
 
             return $req->fetch();
