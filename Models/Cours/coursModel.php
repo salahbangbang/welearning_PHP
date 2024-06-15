@@ -31,7 +31,7 @@ class Cours
       }
     public function readCours()
       {
-        $req = $this->database->prepare("SELECT * FROM Cours INNER JOIN category ON cours.cours_category_id = category.category_id INNER JOIN category_sub ON cours.cours_category_sub_id = category_sub.category_sub_id INNER JOIN user ON cours.cours_user_id = user.user_id");
+        $req = $this->database->prepare("SELECT * FROM Cours INNER JOIN Category ON cours.cours_category_id = category.category_id INNER JOIN category_sub ON cours.cours_category_sub_id = category_sub.category_sub_id INNER JOIN user ON cours.cours_user_id = user.user_id");
           $req->execute();
 
             return $req->fetchAll();
