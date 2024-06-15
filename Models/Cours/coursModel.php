@@ -31,7 +31,7 @@ class Cours
       }
     public function readCours()
       {
-        $req = $this->database->prepare("SELECT * FROM Cours INNER JOIN Category ON cours.cours_category_id = category.category_id INNER JOIN Category_sub ON cours.cours_category_sub_id = category_sub.category_sub_id INNER JOIN User ON cours.cours_user_id = user.user_id");
+        $req = $this->database->prepare("SELECT * FROM Cours INNER JOIN Category ON Cours.cours_category_id = Category.category_id INNER JOIN Category_sub ON Cours.cours_category_sub_id = Category_sub.category_sub_id INNER JOIN User ON Cours.cours_user_id = User.user_id");
           $req->execute();
 
             return $req->fetchAll();
@@ -44,14 +44,14 @@ class Cours
       }
     public function readCoursByUser()
       {
-        $req = $this->database->prepare("SELECT * FROM Cours INNER JOIN User ON cours.cours_user_id = user.user_id WHERE cours.cours_id = user.user_id");
+        $req = $this->database->prepare("SELECT * FROM Cours INNER JOIN User ON Cours.cours_user_id = User.user_id WHERE Cours.cours_id = User.user_id");
         $req->execute();
 
             return $req->fetchAll();
       }
     public function readCoursByID($cours_id)
       {
-        $req = $this->database->prepare('SELECT * FROM Cours INNER JOIN Category ON cours.cours_category_id = category.category_id INNER JOIN Category_sub ON cours.cours_category_sub_id = category_sub.category_sub_id INNER JOIN User ON cours.cours_user_id = user.user_id WHERE cours_id = ?');
+        $req = $this->database->prepare('SELECT * FROM Cours INNER JOIN Category ON Cours.cours_category_id = Category.category_id INNER JOIN Category_sub ON Cours.cours_category_sub_id = Category_sub.category_sub_id INNER JOIN User ON Cours.cours_user_id = User.user_id WHERE cours_id = ?');
           $req->execute([$cours_id]);
 
             return $req->fetch();

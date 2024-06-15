@@ -1,6 +1,6 @@
 <?php
-//include("../Controllers/About/allAbout.php");
-//include("../Controllers/Contacts/allContact.php");
+include("../Controllers/About/allAbout.php");
+include("../Controllers/Contacts/allContact.php");
 ?>
 
 <footer id="footer" class="">
