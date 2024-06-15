@@ -43,7 +43,7 @@
                 <?php  } ?>
                 <?php if(isset($_SESSION['infoUser'])){ ?>
                   <li class="profile">
-                    <a href="http://localhost/elearning/View/<?php echo $_SESSION['infoUser']['user_type_name'];?>/index.php" style="text-transform: uppercase;"><?php echo $_SESSION['infoUser']['user_first_name']; ?></a>
+                    <a href="http://172.20.0.212/View/<?php echo $_SESSION['infoUser']['user_type_name'];?>/index.php" style="text-transform: uppercase;"><?php echo $_SESSION['infoUser']['user_first_name']; ?></a>
                   </li>
                 <?php }else{ ?>
                   <li><a href="Register.php">Register</a></li>
