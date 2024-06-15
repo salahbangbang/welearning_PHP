@@ -8,7 +8,7 @@ class User
       {
         $this->database = $database;
       }
-    public function createUser( $user_last_name, $user_first_name, $user_email, $user_name, $user_type_id, $user_password)
+    public function createUser($user_last_name, $user_first_name, $user_email, $user_name, $user_type_id, $user_password)
       {
         $req = $this->database->prepare("INSERT INTO User(user_last_name, user_first_name, user_email, user_name, user_type_id, user_password) VALUES (:user_last_name, :user_first_name, :user_email, :user_name, :user_type_id, :user_password)");
           $req->bindParam(":user_last_name", $user_last_name);
@@ -104,12 +104,12 @@ class User
 
     public function checkUserLogin($user_name, $user_password)
       {
-          $req = $this->database->prepare('SELECT * FROM User INNER JOIN User_type ON User.user_type_id = User_type.user_type_id WHERE User.user_name = ? AND user.user_password = ?');
+          $req = $this->database->prepare('SELECT * FROM User INNER JOIN User_type ON User.user_type_id = User_type.user_type_id WHERE User.user_name = ? AND User.user_password = ?');
           $req->execute([$user_name, $user_password]);
 
             return $req->fetch();
       }
 
   }
-
+  
 ?>

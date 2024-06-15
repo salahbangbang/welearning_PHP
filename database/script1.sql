@@ -74,7 +74,7 @@ USE Welearn1;
   );
 
   CREATE TABLE User(
-    user_id  INT NOT NULL auto_increment,
+    user_id INT NOT NULL auto_increment,
     user_photo LONGBLOB,
     user_last_name VARCHAR (50) NOT NULL,
     user_first_name VARCHAR (50) NOT NULL,
