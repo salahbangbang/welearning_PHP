@@ -1,7 +1,7 @@
 <div id="bodyright" class="">
   <h3>Mon Profil</h3>
 
-  <img src="data:image/jpeg;base64, <?php echo base64_encode($_SESSION['infoUser']['user_photo']); ?>" width="300px">
+  <!--<img src="data:image/jpeg;base64, <?php echo base64_encode($_SESSION['infoUser']['user_photo']); ?>" width="300px">-->
 
   <div id="contact" class="">
     <details id="target-me">

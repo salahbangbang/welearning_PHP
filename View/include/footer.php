@@ -14,9 +14,8 @@
                 <p><?php echo $about['about_summary'] ?></p>
               <?php } ?>
               <div class="footer-socials">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="<?php echo $information['information_facebook']; ?>"><i class="fa-brands fa-facebook"></i></a>
+                <a href="<?php echo $information['information_twitter']; ?>"><i class="fa-brands fa-twitter"></i></a>
               </div>
           </div>
         </div>

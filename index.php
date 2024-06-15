@@ -1,6 +1,6 @@
 <?php
 
-header('Location: View/Home.php');
-exit();
+  header('Location: View/Home.php');
+    exit();
 
 ?>

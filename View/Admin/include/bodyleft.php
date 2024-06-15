@@ -7,7 +7,7 @@
   </ul>
   <h3>Contenue Managment</h3>
   <ul>
-    <li><a href="#">Cours Actifs</a></li>
+    <li><a href="index.php?cours">Cours Actifs</a></li>
     <li><a href="#">Blogs Actifs</a></li>
   </ul>
   <h3>Newsletter & Messages</h3>
@@ -40,6 +40,9 @@
     include("sub-categories.php");
   }
 
+  if(isset($_GET['cours'])){
+    include("cours.php");
+  }
 
   if(isset($_GET['newsletter'])){
     include("newsletter.php");

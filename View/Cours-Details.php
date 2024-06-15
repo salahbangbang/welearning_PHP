@@ -115,7 +115,7 @@ $Ucours = $cours->readCoursByID($_GET['id']);
     <div class="section hidden" id="curriculum-section">
         <h2>Curriculum Section</h2>
 				<!-- <img src="data:image/jpdf;base64, <?php echo base64_encode($Ucours['cours_curriculum_1']);?>" style="height: 200px;">-->
-				<iframe src="data:application/pdf;base64, <?php echo base64_encode($Ucours['cours_curriculum_1']);?>" style="height: 200px; width: 100%;"></iframe>
+				<iframe src="data:application/pdf;base64, <?php echo base64_encode($Ucours['cours_curriculum_1']);?>" style="height: 1000px; width: 100%;"></iframe>
     </div>
 
     <div class="section hidden" id="teacher-section">

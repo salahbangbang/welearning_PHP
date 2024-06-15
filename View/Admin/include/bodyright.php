@@ -3,7 +3,8 @@
 if(!isset($_GET['categories']) &&
    !isset($_GET['sub-categories']) &&
 
-
+   !isset($_GET['cours']) &&
+   !isset($_GET['blog']) &&
 
    !isset($_GET['newsletter']) &&
    !isset($_GET['message']) &&
