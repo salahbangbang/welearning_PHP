@@ -32,18 +32,18 @@
       if($count[0] === '1'){
 
           echo "<script>alert('La réponse à cette question existe déjà !')</script>";
-          echo "<script>window.open('../../View/admin/index.php?faq','_self')</script>";
+          echo "<script>window.open('../../View/Admin/index.php?faq','_self')</script>";
       }else{
 
         $this->faq->createFaq($_POST['faq_question'], $_POST['faq_answer']);
           echo "<script>alert('Félicitation la F.A.Q a bien été créée')</script>";
-          echo "<script>window.open('../../View/admin/index.php?faq','_self')</script>";
+          echo "<script>window.open('../../View/Admin/index.php?faq','_self')</script>";
             }
       }
       public function delete(){
         $this->faq->deleteFaq($_POST['deleteFaq']);
           echo "<script>alert('La F.A.Q a bien été Supprimée')</script>";
-          echo "<script>window.open('../../View/admin/index.php?faq','_self')</script>";
+          echo "<script>window.open('../../View/Admin/index.php?faq','_self')</script>";
       }
 
   }

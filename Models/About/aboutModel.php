@@ -18,7 +18,7 @@ class About
       }
     public function updateAbout($about_summary, $about_content, $about_id)
       {
-        $req = $this->database->prepare("UPDATE about SET about_summary = :about_summary, about_content = :about_content, about_id = :about_id WHERE about_id = :about_id");
+        $req = $this->database->prepare("UPDATE About SET about_summary = :about_summary, about_content = :about_content, about_id = :about_id WHERE about_id = :about_id");
           $req->bindParam(":about_summary", $about_summary);
           $req->bindParam(":about_content", $about_content);
           $req->bindParam(":about_id", $about_id);

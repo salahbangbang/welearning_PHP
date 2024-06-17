@@ -52,7 +52,7 @@
       public function delete(){
         $this->newsletter->deleteNewsletter($_POST['deleteNewsletter']);
           echo "<script>alert('La Newsletter a bien été supprimée')</script>";
-          echo "<script>window.open('../../View/admin/index.php?newsletter','_self')</script>";
+          echo "<script>window.open('../../View/Admin/index.php?newsletter','_self')</script>";
       }
 
   }

@@ -10,7 +10,7 @@ class Faq
       }
     public function createFaq($faq_question, $faq_answer)
       {
-        $req = $this->database->prepare("INSERT INTO faq(faq_question, faq_answer) VALUES (:faq_question, :faq_answer)");
+        $req = $this->database->prepare("INSERT INTO Faq(faq_question, faq_answer) VALUES (:faq_question, :faq_answer)");
           $req->bindParam(":faq_question", $faq_question);
           $req->bindParam(":faq_answer", $faq_answer);
 

@@ -19,7 +19,7 @@ class Category
       }
     public function readCategory()
       {
-        $req = $this->database->prepare("SELECT * FROM category");
+        $req = $this->database->prepare("SELECT * FROM Category");
 			    $req->execute();
 
 			      return $req->fetchAll();

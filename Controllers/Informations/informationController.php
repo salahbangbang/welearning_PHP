@@ -32,7 +32,7 @@
           //die();
 
             echo "<script>alert('Un ou plusieurs de vos coordonée(s) ont bien été modifiée(s)')</script>";
-            echo "<script>window.open('../../View/admin/index.php?information','_self')</script>";
+            echo "<script>window.open('../../View/Admin/index.php?information','_self')</script>";
       }
   }
 

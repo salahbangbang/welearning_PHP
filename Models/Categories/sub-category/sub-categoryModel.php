@@ -19,7 +19,7 @@ class Subcategory
       }
     public function readSubcategory()
       {
-        $req = $this->database->prepare("SELECT * FROM category_sub");
+        $req = $this->database->prepare("SELECT * FROM Category_sub");
 			    $req->execute();
 
 			      return $req->fetchAll();
@@ -51,14 +51,14 @@ class Subcategory
       }
     public function readSubcategoryByName($category_sub_name)
       {
-        $req = $this->database->prepare("SELECT count(*) FROM category_sub where category_sub_name = '".$category_sub_name."'");
+        $req = $this->database->prepare("SELECT count(*) FROM Category_sub where category_sub_name = '".$category_sub_name."'");
   		    $req->execute();
 
   		      return $req->fetch();
       }
     public function readSubcategoryByID($category_sub_id)
       {
-        $req = $this->database->prepare('SELECT * FROM category_sub WHERE category_sub_id = ?');
+        $req = $this->database->prepare('SELECT * FROM Category_sub WHERE category_sub_id = ?');
           $req->execute([$category_sub_id]);
 
             return $req->fetch();

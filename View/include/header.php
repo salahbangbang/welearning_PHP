@@ -43,10 +43,10 @@
                 <?php  } ?>
                 <?php if(isset($_SESSION['infoUser'])){ ?>
                   <li class="profile">
-                    <a href="http://localhost/elearning/View/<?php echo $_SESSION['infoUser']['user_type_name'];?>/index.php" style="text-transform: uppercase;"><?php echo $_SESSION['infoUser']['user_first_name']; ?></a>
+                    <a href="http://172.20.0.212/View/<?php echo $_SESSION['infoUser']['user_type_name'];?>/index.php" style="text-transform: uppercase;"><?php echo $_SESSION['infoUser']['user_first_name']; ?></a>
                   </li>
                 <?php }else{ ?>
-                  <li><a href="register.php">Register</a></li>
+                  <li><a href="Register.php">Register</a></li>
                 <?php  } ?>
               </ul>
             </div>
@@ -83,7 +83,7 @@
           </div>
           <div class="bottom-right">
             <?php if(isset($_SESSION['infoUser']) && isset($_SESSION['infoUser']['user_type_name']) && $_SESSION['infoUser']['user_type_name'] == 'Admin') { ?>
-                <a href="http://localhost/elearning/View/admin/" class="button-19">Appuyer sur moi</a>
+                <a href="http://localhost/elearning/View/Admin/" class="button-19">Appuyer sur moi</a>
             <?php } ?>
           </div>
         </div>

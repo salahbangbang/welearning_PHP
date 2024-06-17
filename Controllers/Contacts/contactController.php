@@ -32,7 +32,7 @@
           //die();
 
             echo "<script>alert('Un ou plusieurs contact(s) ont bien été Modifiée(s)')</script>";
-            echo "<script>window.open('../../View/admin/index.php?contact','_self')</script>";
+            echo "<script>window.open('../../View/Admin/index.php?contact','_self')</script>";
       }
   }
 

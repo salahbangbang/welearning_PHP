@@ -6,9 +6,7 @@
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   		<link rel="stylesheet" type="text/css" href="../assets/css/commun.css">
 			<link rel="stylesheet" type="text/css" href="css/header.css">
-
-				<link rel="stylesheet" type="text/css" href="css/About.css">
-
+			<link rel="stylesheet" type="text/css" href="css/About.css">
 			<link rel="stylesheet" type="text/css" href="css/client.css">
 			<link rel="stylesheet" type="text/css" href="css/newsletter.css">
 			<link rel="stylesheet" type="text/css" href="css/footer.css">
@@ -44,6 +42,7 @@
 				<p><?php echo "Réponse: " .$faq['faq_answer'];?></p>
 				<?php } ?>
     </div>
+
     <div id="term" class="term">
 			<h1>Terms & Conditions</h1>
 			<?php foreach($AllTerm as $term) { ?>
@@ -52,7 +51,6 @@
 				<p><?php echo "A qui ce Term s'adresse t-il ? " .$term['user_type_name'];?></p>
 			<?php } ?>
 		</div>
-
 
   </div>
 

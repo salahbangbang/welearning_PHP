@@ -30,19 +30,19 @@
       public function create(){
         $this->term->createTerm($_POST['term_name'], $_POST['term_content'], $_POST['user_type_id']);
           echo "<script>alert('Le Term a bien été Créé !')</script>";
-          echo "<script>window.open('../../View/admin/index.php?terms','_self')</script>";
+          echo "<script>window.open('../../View/Admin/index.php?terms','_self')</script>";
       }
       public function delete(){
         //var_dump($_POST);
         //die();
         $this->term->deleteTerm($_POST['deleteTerm']);
           echo "<script>alert('Le Term a bien été Supprimé')</script>";
-          echo "<script>window.open('../../View/admin/index.php?terms','_self')</script>";
+          echo "<script>window.open('../../View/Admin/index.php?terms','_self')</script>";
       }
       public function update(){
         $this->term->updateTerm($_POST["term_name"], $_POST["term_content"], $_POST["user_type_id"], $_POST["term_id"]);
             echo "<script>alert('Le Term a bien été Modifiée')</script>";
-            echo "<script>window.open('../../View/admin/index.php?terms','_self')</script>";
+            echo "<script>window.open('../../View/Admin/index.php?terms','_self')</script>";
       }
   }
 
