@@ -17,7 +17,7 @@
 			<link rel="stylesheet" type="text/css" href="css/newsletter.css">
 			<link rel="stylesheet" type="text/css" href="css/footer.css">
   			<link rel="shortcut icon" href="../assets/logo/Favicon.png">
-			<title>Elearning | Teachers</title>
+			<title>Elearning | Cours</title>
 	</head>
 	<body>
 
